@@ -1,0 +1,1 @@
+console.log('dom observer 1.0');

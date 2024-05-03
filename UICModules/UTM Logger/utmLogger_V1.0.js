@@ -1,0 +1,1 @@
+console.log('utm logger 1.0');

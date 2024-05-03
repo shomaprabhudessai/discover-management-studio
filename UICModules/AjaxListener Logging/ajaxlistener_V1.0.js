@@ -1,0 +1,1 @@
+console.log('ajax listener 1.0');
