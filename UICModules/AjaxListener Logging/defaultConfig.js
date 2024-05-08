@@ -1,1 +1,4 @@
 
+ajaxListener: {
+  privacy: null
+}
