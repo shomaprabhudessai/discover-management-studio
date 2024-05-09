@@ -1,4 +1,5 @@
 console.log('12.1.12')
+window.DCX = {};
 var config={
   config = {
     core: {},
@@ -6,7 +7,10 @@ var config={
     services: {}
   }
 };
+DCX.addModule("module1", function() {
 
+  console.log('I am module1")
+});
 config = {
   core: {
     blockedEl = [],
