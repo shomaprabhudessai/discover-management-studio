@@ -1,1 +1,5 @@
-console.log('ajax listener 1.1');
+DCX.addModule('ajaxListener', function(){
+    var ajax;
+    var sum = 0;
+    return sum++;
+});
