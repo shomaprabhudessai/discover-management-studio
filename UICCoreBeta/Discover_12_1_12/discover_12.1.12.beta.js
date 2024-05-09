@@ -1,34 +1,49 @@
-console.log('12.1.12')
-window.DCX = {};
-var config={
-  config = {
-    core: {},
-    modules: {},
-    services: {}
-  }
-};
-DCX.addModule("module1", function() {
+// Sanity check
+if (window.DCX) {
+    throw "Attempting to recreate DCX. Library may be included more than once on the page.";
+}
+window.DCX = (function () {
+  console.log('some script');
+})
 
-  console.log('I am module1")
+(function () {
+  console.log('IIFE');
+}());
+
+DCX.addService("service1", function () {
+   console.log('service 1');
 });
-config = {
-  core: {
-    blockedEl = [],
-    delay: 100.
-    modules: {
-      module1: { enabled: false },
-      module2: { enabled: false }
-    }
-  },
-  modules: {
-    module1: {
-      delay: '400'
-    },
-    module2: {
-      delay: '400'
-    }
-  }
-};
-(function() =>{
-  console.log('init')
-})()
+DCX.addService("service2", function () {
+   console.log('service 2');
+});
+
+DCX.addModule("module1", function (context) {
+   console.log('module 1');
+});
+
+DCX.addModule("module2", function (context) {
+   console.log('module 2');
+});
+
+ config = 
+    {
+        core: {
+            
+            blockedElements: [],
+
+      			version: {
+      				author: "",
+      				date: "",
+      			},
+        },
+        services: {
+            queue: {
+                
+            },
+         
+        },
+        modules: {
+           module1: '',
+          module2: ''
+        }
+    };
