@@ -24,6 +24,13 @@ DCX.addModule('ajaxListener', function(){
     return sum++;
 });
 
+
+DCX.addModule('ajaxListener', function(){
+    var ajax;
+    var sum = 0;
+    return sum++;
+});
+
 DCX.addModule("module1", function (context) {
    console.log('module 1');
 });
