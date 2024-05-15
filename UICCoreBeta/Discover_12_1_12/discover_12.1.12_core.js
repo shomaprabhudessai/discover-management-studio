@@ -25,25 +25,3 @@ DCX.addModule("module2", function (context) {
    console.log('module 2');
 });
 
- config = 
-    {
-        core: {
-            
-            blockedElements: [],
-
-      			version: {
-      				author: "",
-      				date: "",
-      			},
-        },
-        services: {
-            queue: {
-                
-            },
-         
-        },
-        modules: {
-           module1: '',
-          module2: ''
-        }
-    };
