@@ -13,7 +13,7 @@ config = {
   /* services */
   services: {
     service1: {
-      enabled: true;
+      enabled: true
     }
   },
    /* services 
