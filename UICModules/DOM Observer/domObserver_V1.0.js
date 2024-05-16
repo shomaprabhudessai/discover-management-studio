@@ -1,1 +1,44 @@
-console.log('dom observer 1.0');
+// Dom observer V1.0
+// Define the domObserver module
+DCX.addModule('domObserver', function() {
+    var observer;
+    var changeCount = 0;
+
+    // Function to log DOM changes
+    function logDomChanges(mutationsList) {
+        for (const mutation of mutationsList) {
+            if (mutation.type === 'childList') {
+                console.log('A child node has been added or removed.');
+            } else if (mutation.type === 'attributes') {
+                console.log('The ' + mutation.attributeName + ' attribute was modified.');
+            }
+        }
+        changeCount++;
+    }
+
+    // Function to start observing
+    function startObserving(container, config) {
+        if (!observer) {
+            observer = new MutationObserver(logDomChanges);
+            observer.observe(container, config);
+            console.log('DOM observer started.');
+        }
+    }
+
+    // Function to stop observing
+    function stopObserving() {
+        if (observer) {
+            observer.disconnect();
+            observer = null;
+            console.log('DOM observer stopped.');
+        }
+    }
+
+    // Returning the public functions
+    return {
+        logDomChanges: logDomChanges,
+        startObserving: startObserving,
+        stopObserving: stopObserving,
+        version: 1.0
+    };
+});

@@ -1,1 +1,0 @@
-console.log('ajax listener 1.0');console.log('dom observer 1.0');

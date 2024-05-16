@@ -1,4 +1,4 @@
-/ Sanity check
+//Version 12.1.12
 if (window.DCX) {
     throw "Attempting to recreate DCX. Library may be included more than once on the page.";
 }
