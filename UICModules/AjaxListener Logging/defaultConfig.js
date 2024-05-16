@@ -1,3 +1,4 @@
+// Ajaxlistener config
 var config ={
   core: {
     // Other config
