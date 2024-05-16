@@ -1,3 +1,4 @@
+// Utm logger Config
 var config = {
     core: {
         // Other core configurations
