@@ -24,7 +24,13 @@ config = {
       module1: {
         enabled: true,
         load: 300
-      }
+      },
+      ajaxListener: {
+        enabled: true
+      },
+      domObserver: {
+                enabled: true
+            }
     }
   },
   /* services */
@@ -42,6 +48,19 @@ config = {
       config2: {
         xyz: `200 ${someObj}`
       }
+    },
+    domObserver: {
+            observeAttributes: true,
+            observeChildList: true,
+            observeSubtree: true,
+            observeCharacterData: false,
+            logChanges: true
+        }
+    ajaxListener: {
+      fetchUrl: true,
+      xhrUrl: false,
+      headers: false,
+      timeout: true
     }
   }
 };
