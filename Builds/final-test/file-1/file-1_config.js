@@ -42,7 +42,14 @@ config = {
       config2: {
         xyz: `200 ${someObj}`
       }
-    }
+    },
+    // ajaxlistener in modules config
+ajaxListener: {
+  privacy: null
+},
+dcCookie: {
+  
+}
   }
 };
 
