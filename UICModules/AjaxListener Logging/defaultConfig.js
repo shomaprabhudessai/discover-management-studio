@@ -1,43 +1,37 @@
-// Ajaxlistener config
-var config ={
-  core: {
-    // Other config
-      // .
-      // .
-      // .
-      // .
-    modules: {
-      // Other modules
-      // .
-      // .
-      // .
-      // .
-      // ajaxlistener in core.modules config
-  
-      ajaxListener: {
-        enabled: true
+{
+  "ajaxListener": {
+    "skipSafetyCheck": true,
+    "xhrEnabled": false,
+    "fetchEnabled": false,
+    "webSocketEnabled": true,
+    "eventSourceEnabled": true,
+    "urlBlocklist": [],
+    "filters": [
+      {
+        "log": {
+          "requestHeaders": false,
+          "requestData": true,
+          "responseHeaders": true,
+          "responseData": true,
+          "queryString": true,
+          "parseRequestString": false,
+          "sensitiveFields": [
+            {
+              "field": "John",
+              "replacement": "*******"
+            }
+          ],
+          "privacyPatterns": [
+            {
+              "pattern": {
+                "regex": "John",
+                "flags": "g"
+              },
+              "replacement": "***"
+            }
+          ]
+        }
       }
-      // .
-      // .
-      // .
-      // .
-    }
-  },
-  modules: {
-    // Other modules
-    // .
-    // .
-    // .
-
-    // Add in modules
-    ajaxListener: {
-      fetchUrl: true,
-      xhrUrl: false,
-      headers: false,
-      timeout: true
-    }
+    ]
   }
- 
-  
-  
 }
